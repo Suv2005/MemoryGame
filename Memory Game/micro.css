@@ -1,0 +1,67 @@
+body{
+    background-image: url("pattern.png");
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+a :hover{
+  color: orange;
+}
+.Container{
+    height: 700px;
+    width:600px;
+    background-color: rgb(242, 213, 133);
+    margin-left: 33%;
+}
+.Score{
+    text-align: center;
+    color: aliceblue;
+    background-color: rgb(253, 113, 113);
+    font-size: 20px;
+    height: 30px;
+
+}
+.start{
+    color: blueviolet;
+    background-color: pink;
+    font-size: 20px;
+}
+.game{
+    margin-top: 20px;
+    display: grid;
+    justify-content: center;
+    gap: 2px;
+    transition: 0.25s;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100p;
+}
+.check{
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    font-size: 50px;
+    background-color: rgb(248, 192, 8);
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+.Open, .boxMatch{
+    transform: rotateY(0deg);
+}
+.check::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(255, 127, 195);
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+.Open::after,
+.boxMatch::after{
+    transform: rotateY(180deg);
+}
